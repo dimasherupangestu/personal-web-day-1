@@ -20,30 +20,44 @@
 
     <h1 class="title">Get in touch</h1>
     <div class="contener">
-      <form action="">
-        <label for="input" class="label">Nama :</label>
-        <input type="text" class="input" placeholder="Masukan Nama..." />
-
-        <label for="input" class="label">email :</label>
-        <input type="text" class="input" placeholder="Masukan email..." />
-
-        <label for="input" class="label">Phone Number :</label>
+      <form>
+        <label class="label" for="inputNama">Nama :</label>
         <input
           type="text"
           class="input"
+          id="inputNama"
+          placeholder="Masukan Nama..."
+        />
+
+        <label for="inputEmail" class="label">email :</label>
+        <input
+          type="text"
+          class="input"
+          id="inputEmail"
+          placeholder="Masukan email..."
+        />
+
+        <label for="inputPhone" class="label">Phone Number :</label>
+        <input
+          type="text"
+          class="input"
+          id="inputPhone"
           placeholder="Masukan Phone Number..."
         />
-        <label for="input" class="label">Subject :</label>
-        <select name="" id="" class="selec">
-          <option value=""></option>
-          <option value="">Fron end</option>
-          <option value="">Back end</option>
-          <option value="">Full stack</option>
+        <label for="inputSubject" class="label">Subject :</label>
+        <select class="selec" id="inputSubject">
+          <option></option>
+          <option>Fron end</option>
+          <option>Back end</option>
+          <option>Full stack</option>
         </select>
-        <label for="" class="label">Your massage</label>
-        <textarea name="" id="" class="area"></textarea>
-        <button type="submit" class="btn">submit</button>
+        <label for="inputText" class="label">Your massage</label>
+        <textarea class="area" id="inputText"></textarea>
+        <button type="submit" class="btn" id="submit" onclick="submitData();">
+          submit
+        </button>
       </form>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
