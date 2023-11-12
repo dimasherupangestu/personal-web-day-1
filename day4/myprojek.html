@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="projek.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <title>myProjek</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="list">
+        <img src="imgs/brandred.png" alt="" />
+        <a href="index.html">home</a>
+        <a href="myprojek.html">MyProjek</a>
+      </div>
+      <div class="contak">
+        <a href="contak.html">Contact me</a>
+      </div>
+    </nav>
+
+    <h1 class="title">ADD MY PROJECT</h1>
+
+    <div class="contener">
+      <form onsubmit="submitBlog(event)">
+        <label class="label" for="projectName">Project Name</label>
+        <input
+          type="text"
+          class="input"
+          id="projectName"
+          placeholder="Masukan Nama Project..." />
+        <div class="projek">
+          <div class="start">
+            <label for="startProject" class="label">Start Date :</label>
+            <input
+              type="date"
+              class="inputProject"
+              id="startProject"
+              placeholder="mulai projek..." />
+          </div>
+          <div class="end">
+            <label for="endProject" class="label">end projek :</label>
+            <input
+              type="date"
+              class="endProject"
+              id="endProject"
+              placeholder="Masukan Phone Number..." />
+          </div>
+        </div>
+
+        <label for="inputText" class="label">Description :</label>
+        <textarea class="area" id="inputText"></textarea>
+
+        <label for="techno" class="label">Technologies :</label>
+
+        <div class="techno">
+          <div class="star-techno-conten">
+            <input type="checkbox"  value="nodejs"
+             id="nodejs" class="tech" />
+            <span>node js</span>
+
+            <input
+              type="checkbox"
+              value="nextjs"
+              id="nextjs"
+              class="tech-k" />
+            <span class="span-k">next JS</span>
+          </div>
+
+          <div class="end-techno">
+            <input type="checkbox"  value="reactjs" class="tech" id="reacjs" />
+            <span class="span-n">react JS</span>
+
+            <input
+              type="checkbox"
+              value="typejs"
+              id="typejs"
+              class="tech-k" />
+            <span class="span-k">type JS</span>
+          </div>
+        </div>
+        
+        <label class="label" for="uploadFile">Upload file</label>
+        <input
+          type="file"
+          class="input"
+          id="uploadFile"
+          placeholder="masukan gambar"/>
+        <div class="projek">
+        <button type="submit" class="btn" id="submit" >
+          submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+    <div class="cards-container">
+        <h1>my project</h1>
+        <div class="cards">
+          <!-- <div class="card">
+            <a href="detailProjek.html">
+            <img src="imgs/3.jpg" alt="" class="img-card">
+            <h3>hallo word</h3>
+            <h4>durasi : 3bulan</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum molestias non, est quam vel dignissimos pariatur repellendus eum unde laboriosam!</p>
+            <div class="icon">
+           
+          </div>
+            <div class="action">
+                <a href="" class="edit">edit</a>
+                <button  class="delete" onclick="hapusCard()">Delete</button>
+            </div>
+          </a>
+        </div> -->
+        </div>
+    </div>
+    <script src="projek.js"></script>
+  </body>
+</html>
