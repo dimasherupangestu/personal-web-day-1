@@ -106,15 +106,16 @@ function renderBlog() {
             </div>
             <div class="action">
                 <a href="" class="edit">edit</a>
-                <a href="" class="delete">delete</a>
-            </div>
+                <a href="" class="delete" onclick="hapusCard(e)">delete</a>
+            <div>
         </a>
         </div>`;
 }
 
 
-function hapusCard() {
-    dataBlog.remove()
+function hapusCard(e) {
+    e.preventDefault();
+    return blog.remove()
 }
 
 
