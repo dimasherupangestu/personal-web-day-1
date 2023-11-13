@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ccc;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  /* height: 4000px; */
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #ddd;
+  padding: 0.5rem 7%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.navbar .navmenu {
+  display: flex;
+  transition: 0.3s inherit;
+}
+.navbar .navmenu a {
+  display: inline-block;
+  color: #000;
+  margin-left: 25px;
+  padding-top: 0.5rem;
+  font-size: 18px;
+  font-weight: bold;
+}
+.navbar .navmenu .menu-contak {
+  display: none;
+}
+.navbar .nav-log img {
+  width: 3.9rem;
+  height: 2.9rem;
+}
+
+.navbar .navmenu a:hover {
+  color: orangered;
+}
+.navbar .navmenu a::after {
+  content: "";
+  display: block;
+  margin-top: 3px;
+  border-bottom: 0.1rem solid orangered;
+  padding-bottom: 0.3rem;
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+.navbar .navmenu a:hover::after {
+  transform: scaleX(1);
+}
+.navbar .icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  gap: 20px;
+}
+.navbar .icon .contak {
+  display: inline-block;
+  color: #fff;
+  background-color: #000;
+  padding: 0.5rem 1.2rem;
+  border-radius: 7px;
+}
+
+.navbar .icon #hamburger {
+  display: none;
+}
+.navbar .icon img {
+  width: 30px;
+}
+.title {
+  text-align: center;
+  margin-top: 6rem;
+}
+.title.top {
+  margin-top: 16rem;
+}
+.contener {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contener form {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contener form .input,
+form .selec {
+  width: 100%;
+  height: 2rem;
+  padding: 4px;
+  border: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.contener form .label {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.area {
+  width: 100%;
+  height: 9rem;
+  padding: 4px;
+  border: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  border-radius: 5px;
+}
+.btn {
+  margin-left: auto;
+  justify-content: end;
+  width: 120px;
+  height: 40px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.projek {
+  display: flex;
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.projek .start {
+  flex: 1 1 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.projek .start .label {
+  display: block;
+}
+.projek .start .inputProject {
+  display: inline-block;
+  width: 95%;
+  padding: 4px;
+  height: 2rem;
+  border: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  border-radius: 5px;
+}
+.projek .end {
+  flex: 1 1 2rem;
+}
+.projek .end .endProject {
+  display: inline-block;
+  width: 95%;
+  padding: 4px;
+  height: 2rem;
+  border: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.techno {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+  width: 50%;
+}
+
+.techno .star-techno-conten {
+  display: flex;
+  /* background-color: red; */
+  padding: 10px;
+}
+.techno .end-techno {
+  display: flex;
+  padding: 10px;
+  /* background-color: aqua; */
+}
+.techno .tech-k {
+  margin-left: auto;
+  width: 20px;
+}
+.techno .tech {
+  width: 20px;
+}
+.techno span {
+  margin-left: 10px;
+}
+#projectName {
+  padding: 16px 5px 5px 5px;
+}
+.cards-container {
+  background-color: #fff;
+  display: grid;
+  width: 100%;
+  margin-top: 4rem;
+}
+.cards-container h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+.cards-container .cards {
+  margin: auto;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  color: #000;
+}
+.cards-container .cards .card {
+  display: grid;
+  border: 1px solid #222;
+  padding: 5px 10px;
+  width: 300px;
+  margin: 1rem auto;
+}
+.cards-container .cards .card a {
+  color: #000;
+}
+.icon {
+  display: flex;
+}
+.cards-container .cards .card .img-card {
+  width: 300px;
+}
+.cards-container .cards .card .img-icon {
+  width: 45px;
+  margin-top: 10px;
+}
+.cards-container .cards .card h3 {
+  margin-top: 0.6rem;
+  font-size: 1.3rem;
+}
+.cards-container .cards .card h4 {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.cards-container .cards .card p {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.cards-container .cards .card .action {
+  margin-top: 1rem;
+  display: flex;
+  gap: 4px;
+}
+.cards-container .cards .card .action .edit {
+  display: inline-block;
+  padding: 5px 3.5rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+.cards-container .cards .card .action .delete {
+  display: inline-block;
+  padding: 5px 3rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  justify-content: end;
+}
+
+/* kurang dari leptop */
+@media only screen and (max-width: 1300px) {
+  .contener {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contener span {
+    font-size: 1.3rem;
+  }
+  .cards {
+    display: grid;
+    grid-auto-flow: row;
+  }
+  .card {
+    display: grid;
+    grid-auto-flow: row;
+  }
+}
+/* responsif tablet */
+@media only screen and (max-width: 770px) {
+  html {
+    font-size: 64%;
+  }
+  .navbar .icon #hamburger {
+    display: inline-block;
+  }
+  .navbar .navmenu {
+    position: absolute;
+    top: 100%;
+    right: -120%;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0.3rem;
+  }
+  .navbar .navmenu.active {
+    right: 0;
+  }
+
+  .navbar .navmenu .menu-contak {
+    display: block;
+  }
+  .navbar .icon .contak {
+    display: none;
+  }
+  .navbar .navmenu a {
+    width: 100%;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards {
+    display: grid;
+    grid-auto-flow: column;
+  }
+  .cards {
+    display: grid;
+    grid-auto-flow: row;
+  }
+  .card {
+    display: grid;
+    grid-auto-flow: row;
+  }
+}
