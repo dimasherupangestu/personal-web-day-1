@@ -65,7 +65,7 @@ const testimonialData = [
 {
     nama : "Dody",
     conten : "Saya malu dangan dia karna fans barca",
-    Image : "https:images.unsplash.com/photo-1507438222021-237ff73669b5?q=80&w=1373&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    Image : "https://images.unsplash.com/photo-1519456264917-42d0aa2e0625?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     reting : 1
 },
 {
