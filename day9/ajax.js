@@ -76,5 +76,5 @@ async function filterTestimonial(reting) {
             testimonialHtml += card(item)
         })
     }
-    document.querySelector(".cards").innerHTML = testimonialHtml
+    document.querySelector(".cards").innerHTML = testimonialHtml;
 }
