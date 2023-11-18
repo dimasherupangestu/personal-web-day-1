@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>testimonial</title>
+    <link rel="stylesheet" href="testimonial.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-log">
+        <img src="imgs/brandred.png" alt="" />
+      </div>
+      <div class="navmenu">
+        <a href="index.html">home</a>
+        <a href="myprojek.html">My Projek</a>
+        <a href="testimonial.html">testimonials</a>
+        <a href="contak.html" class="menu-contak">Contak</a>
+      </div>
+
+      <div class="icon">
+        <a class="contak" href="contak.html">Contak Me</a>
+        <a href="#" id="hamburger"> <img src="imgs/hamburger.png" alt="" /></a>
+      </div>
+    </nav>
+
+    <h1 class="title">my testimonials</h1>
+    <div class="reting">
+      <h3 class="reting-title">Rating By Star</h3>
+      <div class="reting-button">
+        <button class="button-ret" onclick="allTestimonials()">all</button>
+
+        <button class="button-ret" onclick="filterTestimonial(1)">
+          1 <img src="imgs/starputih.png" alt="" />
+
+          <button class="button-ret" onclick="filterTestimonial(2)">
+            2 <img src="imgs/starputih.png" alt="" />
+
+            <button class="button-ret" onclick="filterTestimonial(3)">
+              3 <img src="imgs/starputih.png" alt="" />
+
+              <button class="button-ret" onclick="filterTestimonial(4)">
+                4 <img src="imgs/starputih.png" alt="" />
+
+                <button class="button-ret" onclick="filterTestimonial(5)">
+                  5 <img src="imgs/starputih.png" alt="" />
+        </button>
+      </div>
+    </div>
+    <div class="cards">
+      <!-- <div class="card">
+          <img src="imgs/3.jpg" alt="" class="img-card" />
+          <p>
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum"
+          </p>
+          <h3>- hallo word</h3>
+          <div class="star">
+            <span>4</span>
+          <img src="imgs/star.png" alt="">
+        </div>
+      </div> -->
+    </div>
+    <script src="ajax.js"></script>
+  </body>
+</html>
