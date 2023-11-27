@@ -4,7 +4,7 @@
   "description": "my personal web in dumbways",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon day11/index.js"
+    "start": "nodemon index.js"
   },
   "author": "dimas heru",
   "license": "ISC",

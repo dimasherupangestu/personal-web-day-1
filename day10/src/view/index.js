@@ -1,6 +1,15 @@
 const express = require('express')
+const path = require('path')
 const app = express()
 const port = 3000
+
+app.set('view engine', 'hbs')
+// app.set = buat setting varible global, configuratoin, dll
+app.set("views", path.join(__dirname, 'src/view'))
+
+app.use('/assets', express.static(path.join(__dirname,'src/assets')))
+app.use(express.urlencoded({ extended: false }))
+
 
 app.get('/', (req, res) => {
     res.send('hallo word');
