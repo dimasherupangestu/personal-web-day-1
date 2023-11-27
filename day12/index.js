@@ -18,14 +18,14 @@ app.get('/testimonial', testimonial)
 app.get('/myprojek', myprojek)
 app.post('/myprojek', addmyprojek)
 
-app.get('/updeteProjek/:id', updateProjekView)
+app.get('/updeteProjek/:id', updateProjekView)  
 app.post('/updateProjek', updateProjek)
 
 app.post('/deProjek/:id', deleteProjek)
 app.get('/projectDetail/:id', detailProjek)
 
 const dataView = []
-let durasi = '' 
+
 
   function home(req, res) {
     
@@ -67,7 +67,7 @@ let durasi = ''
       typescript = true
     }
     // ambil waktu durasi
-    durasi += durasihari(inputStart,inputEnd);
+    let durasi = durasihari(inputStart,inputEnd);
     // console.log('durasi', durasi)
     
     // console.log('checkboxes', checkboxes)
@@ -157,13 +157,13 @@ let durasi = ''
   }
   
   function durasihari(inputStart, inputEnd) {
-    const dateOne = new Date(inputStart);
-  const dateTwo = new Date(inputEnd);
+    const dataStart = new Date(inputStart);
+    const dataEnd= new Date(inputEnd);
 
   // buat data satu haru
   const oneDay = 24 * 60 * 60 * 1000;
   //   mengembalikan nilai absolut dari suatu angka
-  const time = Math.abs(dateTwo - dateOne);
+  const time = Math.abs(dataEnd - dataStart);
   // console.log(time)
   //   pembulatan keatas
   const days = Math.round(time / oneDay);
