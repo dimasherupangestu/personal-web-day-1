@@ -1,0 +1,142 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>home</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- link font poppin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins:wght@100;200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link font poppin akhir -->
+
+    <!-- link icon bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img
+            src="/assets/imgs/brandred.png"
+            width="60"
+            alt=""
+          /></a>
+        <button
+          class="navbar-toggler text-center"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse fw-bold"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="index"
+              >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="myprojek">add Projek</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="testimonial">testimonial</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button type="button" class="btn btn-dark">
+              <a href="contak" class="text-decoration-none text-light">Contak me</a>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar akhir -->
+
+    <!-- card my projek -->
+    <section class="card-projek">
+      <div class="container">
+        <div
+          class="row justify-content-center align-items-center g-2 text-center mb-3"
+        >
+          <div class="row justify-content-end align-items-end g-2">
+            <div class="col justify-content-end">
+              <a
+                href="/myprojek"
+                type="button"
+                class="btn btn-primary text-light"
+              >Add My Projek</a>
+            </div>
+          </div>
+          <div class="col">
+            <h2 class="fw-bold m-3">my projek</h2>
+          </div>
+        </div>
+        <div class="row gx-5 justify-content-center align-items-center g-2">
+          {{#each dataProjekView}}
+            <div class="col-md-4">
+              <div class="card">
+                <a href="detailProjek.html">
+                  <img
+                    src="/assets/imgs/3.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">{{this.projekName}}</h5>
+                    <h5 class="durasi">{{this.starDate}} {{this.endDate}}</h5>
+                    <p class="card-text fs-6">{{this.pesan}}</p>
+                    <div class="icon">
+                      <p>Technologies:</p>
+                      {{#each this.techno}}
+                        {{!-- <p>{{key}} : {{value}}</p> --}}
+                        {{this}}
+                      {{/each}}
+                    </div>
+                    <div
+                      class="row justify-content-center align-items-center g-2"
+                    >
+                      <div class="col-md"><a
+                          href="#"
+                          class="btn btn-secondary w-75 text-light"
+                        >edit</a></div>
+                      <div class="col-md"><a
+                          href="#"
+                          class="btn btn-danger w-75 text-light"
+                        >hapus</a></div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+    <!-- card my projek akhir -->
+
+  </body>
+</html>

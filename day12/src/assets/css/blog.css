@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ccc;
+  text-transform: capitalize;
+  font-family: "Poppins" sans-serif;
+}
+.active {
+  color: orangered !important;
+  font-weight: bold;
+}
+.formblog button,
+nav button {
+  background-color: orangered !important;
+  border: 1px solid orangered !important ;
+}
+.formblog {
+  width: 100%;
+}
+
+.cardBlog {
+  background-color: #fff;
+  padding-bottom: 1rem;
+}
+.cardBlog #aksiCard #edit {
+  width: 100%;
+  height: 2.5rem;
+  margin-right: 0.4rem;
+}
+.cardBlog #aksiCard #delete {
+  width: 100%;
+  height: 2.5rem;
+  margin-right: 0.4rem;
+}

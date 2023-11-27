@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ccc;
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+
+#home .dow {
+  text-decoration: none;
+  color: #000;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+#home .conten p {
+  width: 90%;
+  font-size: 0.9rem;
+}
+
+.container .icon img {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+.icon .do {
+  margin-left: 2.2rem;
+}
+#home .card img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
