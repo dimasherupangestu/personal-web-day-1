@@ -1,0 +1,139 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>detail projek</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- link font poppin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins:wght@100;200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link font poppin akhir -->
+
+    <!-- link icon bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/assets/css/detailProjek.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img
+            src="/assets/imgs/brandred.png"
+            width="60"
+            alt=""
+          /></a>
+        <button
+          class="navbar-toggler text-center"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse fw-bold"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/home"
+              >Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/myprojek">add Projek</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/testimonial">testimonial</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button
+              type="button"
+              class="btn btn-dark"
+              style="background-color: orangered !important;border: 1px solid orangered"
+            >
+              <a href="/contak" class="text-decoration-none text-light">Contak
+                me</a>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar akhir -->
+
+    <h1 class="title">id: {{data.id}} || {{data.projekName}}</h1>
+
+    <div class="contener">
+      <div class="img-hero">
+        <img
+          src="/assets/imgs/t-syarifudin-budiana-uD43wYbmW_M-unsplash.jpg"
+          alt=""
+        />
+      </div>
+      <div class="conten">
+        <h2>duration</h2>
+        <div class="duration">
+          <img src="/assets/imgs/calendar.png" alt="" />
+          <span>{{data.inputStart}}</span>
+        </div>
+        <div class="duration">
+          <img src="/assets/imgs/jam.png" alt="" />
+          <span>{{data.durasi}}</span>
+        </div>
+        <h2 class="tech">Technologies</h2>
+        <div class="icon">
+          {{#if data.reactJs}}
+            <img src="../assets/imgs/reacjs.png" class="img-icon" />
+            <p>react js</p>
+          {{/if}}
+
+          {{#if data.nodeJs}}
+            <img src="../assets/imgs/nodeJs.png" class="icon2 img-icon" />
+            <p>node js</p>
+          {{/if}}
+        </div>
+        <div class="icon">
+          {{#if data.nextJs}}
+            <img src="../assets/imgs/nextjs.png" class="img-icon" />
+            <p>next js</p>
+          {{/if}}
+
+          {{#if data.typescript}}
+            <img src="../assets/imgs/typejs.png" class="icon3 img-icon" />
+            <p>typescript js</p>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+    <div class="text">
+      {{data.pesan}}
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

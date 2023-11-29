@@ -2,6 +2,9 @@ const express = require('express')
 const path = require('path')
 const app = express()
 const port = 3000
+const config = require('./src/config/config.json')
+const { Sequelize, QueryTypes } = require('sequelize')
+const sequelize = new Sequelize(config.development)
 
 app.set('view engine', 'hbs')
 // app.set = buat setting varible global, configuratoin, dll
@@ -28,8 +31,10 @@ const dataView = []
 
 
  async function home(req, res) {
-  
-    res.render('index', {dataView})
+    const query = 'SELECT * FROM projects'
+    const obj = await sequelize.query(query, { type:QueryTypes.SELECT })
+    console.log('obj', obj)
+    res.render('index', {dataView: obj})
   }
 
   function contak(req, res) {
@@ -94,7 +99,7 @@ const dataView = []
     } else{
       res.send('<h2 class="fw-bold m-3 text-center">Data Not Found</h2>')
     }
-    console.log('datates:', dataView)
+    // console.log('datates:', dataView)
   }
   
   function updateProjek(req, res) {
@@ -130,7 +135,7 @@ const dataView = []
       typescript
     };
     
-    console.log('update: ', dataView)
+    // console.log('update: ', dataView)
     res.redirect('/home');
   }
   
@@ -150,8 +155,8 @@ const dataView = []
       const dataFilter = dataView[parseInt(id)]
       dataFilter.id = parseInt(id)
 
-    console.log(id)
-    console.log('datafilter',dataFilter)
+    // console.log(id)
+    // console.log('datafilter',dataFilter)
     res.render('detailProjek', {data: dataFilter})
 
   }
