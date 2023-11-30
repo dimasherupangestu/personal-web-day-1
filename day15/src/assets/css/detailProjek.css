@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ccc;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  /* height: 4000px; */
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.contener {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 80%;
+  margin: 20px auto;
+}
+.img-hero {
+  width: 100%;
+}
+.img-hero img {
+  width: 100%;
+  height: 450px;
+}
+.conten {
+  width: 100%;
+  padding: 2.4rem;
+}
+
+.duration {
+  display: flex;
+  margin-top: 15px;
+}
+.duration img {
+  width: 40px;
+}
+.duration span {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+.tech {
+  margin-top: 20px;
+}
+.icon {
+  display: flex;
+  margin-top: 1rem;
+}
+.icon img {
+  width: 45px;
+  height: 45px;
+  margin-top: 1rem;
+}
+.icon p {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.icon .icon2 {
+  margin-left: 40px;
+}
+.icon .icon3 {
+  margin-left: 4.5rem;
+}
+.text {
+  margin: auto;
+  width: 90%;
+  font-size: 15px;
+  margin-bottom: 2rem;
+}
+
+/* kurang dari leptop */
+@media only screen and (max-width: 1300px) {
+  .contener {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contener span {
+    font-size: 1.3rem;
+  }
+  .img-hero {
+    object-fit: cover;
+  }
+  .cards {
+    display: grid;
+    grid-auto-flow: row;
+  }
+  .card {
+    display: grid;
+    grid-auto-flow: row;
+  }
+}
+/* responsif tablet */
+@media only screen and (max-width: 770px) {
+  html {
+    font-size: 64%;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cards {
+    display: grid;
+    grid-auto-flow: column;
+  }
+  .cards {
+    display: grid;
+    grid-auto-flow: row;
+  }
+  .card {
+    display: grid;
+    grid-auto-flow: row;
+  }
+}
