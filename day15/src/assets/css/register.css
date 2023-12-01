@@ -18,6 +18,7 @@ body {
 .regis {
   display: inline-block;
   text-decoration: none;
+  font-weight: normal;
   margin-right: 1rem;
 }
 .login {

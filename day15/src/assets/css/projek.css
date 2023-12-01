@@ -8,6 +8,7 @@ body {
   background-color: #ccc;
   text-transform: capitalize;
   font-family: "Poppins", sans-serif;
+
   /* height: 4000px; */
 }
 .for {
@@ -15,7 +16,7 @@ body {
 }
 .for .id {
   position: absolute;
-  left: 200%;
+  transform: scale(0);
 }
 .techno {
   display: flex;

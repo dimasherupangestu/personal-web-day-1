@@ -27,10 +27,28 @@ form .selec {
   justify-content: center;
   text-align: center;
 }
-
-/* kurang dari leptop */
-@media only screen and (max-width: 1300px) {
+.regis {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: normal;
+  margin-right: 1rem;
 }
-/* responsif tablet */
-@media only screen and (max-width: 770px) {
+.login {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: normal;
+  margin-right: 1rem;
+}
+@media only screen and (max-width: 1000px) {
+  /* body {
+    background-color: red;
+  } */
+  .regis {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0.6rem;
+  }
+  .login {
+    margin-bottom: 0.5rem;
+  }
 }

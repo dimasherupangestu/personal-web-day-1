@@ -56,11 +56,12 @@ app.get('/logout', logout)
     const query = 'SELECT * FROM projects'
     const obj = await sequelize.query(query, { type:QueryTypes.SELECT })
     // console.log('obj', obj)
-    req.flash('sussces',`login sussces`)
+    
     const user = req.session.user
     const isLogin = req.session.isLogin
     console.log('isLogin:',obj);
-    res.render('index', {data: obj, user,isLogin});
+    req.flash('sussces',`login sussces,`)
+    res.render('index', {data: obj, user:user,isLogin:isLogin});
     
     
   }
