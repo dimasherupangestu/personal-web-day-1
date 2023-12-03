@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ccc;
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+
+#home .dow {
+  text-decoration: none;
+  color: #000;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+#home .conten p {
+  width: 90%;
+  font-size: 0.9rem;
+}
+
+.container .icon img {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+.icon .do {
+  margin-left: 2.2rem;
+}
+#home .card img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card-projek {
+  background-color: #fff;
+  padding-bottom: 1rem;
+}
+.card-projek .card img {
+  width: 100%;
+  height: 19rem;
+}
+.card-projek .durasi {
+  font-size: 1rem;
+  color: #cebebe;
+}
+.card-projek a {
+  text-decoration: none;
+  color: #000;
+}
+.icon {
+  display: flex;
+}
+.card-projek .icon .img-icon {
+  width: 2rem;
+  height: 2rem;
+
+  margin-top: -5px;
+}
+.addnew {
+  width: 9rem;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  border-radius: 3px;
+  background-color: orangered;
+  color: #fff;
+  border: 1px solid orangered;
+}
+.autor {
+  font-size: 1rem;
+}
+.regis {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: normal;
+  margin-right: 1rem;
+}
+.login {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: normal;
+  margin-right: 1rem;
+}
+.logout {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: normal;
+  margin-right: 1rem;
+}
+footer {
+  background-color: black;
+  text-align: center;
+  color: #fff;
+}
+footer .icon {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+footer .icon a {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  transition: 0.5s;
+}
+footer .icon a:hover {
+  color: orangered;
+}
+footer .list a {
+  color: #fff;
+  padding: 1rem 1rem;
+}
+footer .list a:hover {
+  color: orangered;
+}
+footer .copyrigt {
+  padding: 1rem;
+}
+@media only screen and (max-width: 1000px) {
+  /* body {
+    background-color: red;
+  } */
+  .regis {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0.6rem;
+  }
+  .login {
+    margin-bottom: 0.5rem;
+  }
+}

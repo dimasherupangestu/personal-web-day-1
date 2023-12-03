@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  /* background-color: red; */
+}
+
+.contener {
+  text-align: center;
+  margin: 5rem auto;
+}
+.contener img {
+  width: 22rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 0.9rem;
+}
+.contener a {
+  display: inline-block;
+  background-color: orangered;
+  border: 1px solid orangered;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}

@@ -1,0 +1,187 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contak me</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/css/projek.css" />
+    <!-- link font poppin -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins:wght@100;200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- link font poppin akhir -->
+    <!-- link icon bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/assets/css/contak.css" />
+    <!-- link icon bootstrap akhir -->
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary position-relative">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img
+            src="/assets/imgs/brandred.png"
+            width="60"
+            alt=""
+          /></a>
+        <button
+          class="navbar-toggler text-center"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse fw-bold"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/home"
+              >Home</a>
+            </li>
+            {{#if isLogin}}
+              <li class="nav-item">
+                <a class="nav-link" href="/myprojek">add Projek</a>
+              </li>
+            {{/if}}
+            <li class="nav-item">
+              <a class="nav-link" href="/testimonial">testimonial</a>
+            </li>
+
+          </ul>
+          {{#if isLogin}}
+            <a href="/home" class="login nav-link" style="color: orangered;">hi
+              {{user.name}}</a>
+            <a
+              href="/logout"
+              class="logout nav-link"
+              onclick="confimLogout(event)"
+            >logout</a>
+          {{else}}
+            <a href="/registerUsers" class="regis nav-link">register</a>
+            <a href="/login" class="login nav-link">login</a>
+          {{/if}}
+          <form class="d-flex" role="search">
+            <button
+              type="button"
+              class="btn btn-dark"
+              style="background-color: orangered !important;border: 1px solid orangered"
+            >
+              <a href="/contak" class="text-decoration-none text-light">Contak
+                me</a>
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar akhir -->
+
+    <!-- form contak -->
+    <section id="projek">
+      <div class="container">
+        <bs5-grid-row class="text-center">
+          <col-md>
+            <h2 class="mt-md-5 fw-bold text-center">Get In Touch</h2>
+          </col-md>
+        </bs5-grid-row>
+        <div
+          class="row justify-content-center align-items-center g-2 mb-3 mt-2"
+        >
+          <div class="col-md-7">
+            <form>
+              <div class="mb-3">
+                <label for="inputNama" class="form-label">name :</label>
+                <input
+                  type="text"
+                  class="form-control shadow-sm"
+                  id="inputNama"
+                  aria-describedby="inputNama"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="inputEmail" class="form-label">Email :</label>
+                <input
+                  type="text"
+                  class="form-control shadow-sm"
+                  id="inputEmail"
+                  aria-describedby="inputEmail"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="inputPhone" class="form-label">phone number :</label>
+                <input
+                  type="text"
+                  class="form-control shadow-sm"
+                  id="inputPhone"
+                  aria-describedby="inputPhone"
+                />
+              </div>
+
+              <label for="inputSubject" class="label">Subject :</label>
+              <select class="selec" id="inputSubject">
+                <option></option>
+                <option>Fron end</option>
+                <option>Back end</option>
+                <option>Full stack</option>
+              </select>
+
+              <div class="mb-3 mt-3">
+                <label for="pesan" class="form-label">Description :</label>
+                <textarea class="form-control" id="pesan" rows="6"></textarea>
+              </div>
+
+              <button
+                id="but"
+                type="submit"
+                onclick="submitData(event)"
+                class="btn btn-dark btn-sm"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- form projek akhir -->
+    {{! footer }}
+    <footer>
+      <div class="icon">
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-twitter"></i></a>
+      </div>
+
+      <div class="copyrigt">
+        <p>Created by <span>Dimasheru</span> &copy; 2023</p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/contak.js"></script>
+  </body>
+</html>
